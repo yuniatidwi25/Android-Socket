@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_image"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_ip"
+        android:text="IP Address"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/show_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_port"
+        android:text="Port"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txt_ip"
+        android:layout_toRightOf="@id/show_image"/>
+
+    <EditText
+        android:id="@+id/ui_txt_inputIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex : 192.168...."
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/txt_ip"/>
+
+    <EditText
+        android:id="@+id/ui_txt_inputPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex : 3636"
+        android:layout_below="@id/ui_txt_inputIP"
+        android:layout_alignLeft="@id/ui_txt_inputIP"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/ui_btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_below="@id/show_image"
+        android:background="@color/Blue"/>
+
+    <TextView
+        android:id="@+id/serverState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_btn_connect"
+        />
+    <TextView
+        android:id="@+id/ui_txt_console"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/serverState"
+        android:layout_above="@id/ui_txt_inputMsg"/>
+
+    <EditText
+        android:id="@+id/ui_txt_inputMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/ui_btn_send"
+        android:hint="Input Message"/>
+
+    <Button
+        android:id="@+id/ui_btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/Blue"/>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Socket Server</string>
+    <string name="start">Start</string>
+    <string name="shutdown">Shut Down</string>
+</resources>
